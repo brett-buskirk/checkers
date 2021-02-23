@@ -1,0 +1,293 @@
+/* ================================================================================================
+    GLOBAL SETTINGS
+================================================================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: bisque;
+}
+
+/* ================================================================================================
+    HEADING SETTINGS
+================================================================================================ */
+  
+  h2 {
+    text-align: center;
+    font-family: fantasy;
+    padding-top: 20px;
+    font-size: 40px;
+  }
+
+/* ================================================================================================
+    BOARD SETTINGS
+================================================================================================ */
+
+#table {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+
+#board {
+  display: inline-block;
+  width: 640px;
+}
+
+.square {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  border: thin solid black;
+  display: inline-block;
+  margin-top: -4px;
+}
+
+.flash {
+  animation: flash 1.2s linear infinite;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: ghostwhite;
+}
+
+/* ================================================================================================
+    PIECE SETTINGS
+================================================================================================ */
+
+.piece {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.p-red {
+  background: radial-gradient(circle, red, darkred);
+  border: solid 8px red;
+}
+
+.p-black {
+  background: radial-gradient(circle, #555, black);
+  border: solid 8px #555;
+}
+
+.king-red {
+  background: no-repeat center/80% url(../assets/logo-white.png), radial-gradient(circle, red, darkred);
+}
+
+.king-black {
+  background: no-repeat center/80% url(../assets/logo-white.png), radial-gradient(circle, #555, black);
+}
+
+/* ================================================================================================
+    PENS
+================================================================================================ */
+
+.pen {
+  display: inline-block;
+  width: 162px;
+  height: 640px;
+  border: solid thin #222;
+  margin: 0 15px;
+}
+
+@keyframes flash {
+  0% {
+    background: radial-gradient(circle, yellow, orange);
+  }
+  50% {
+    background-color: radial-gradient(circle, orange, yellow);
+  }
+  100% {
+    background-color: radial-gradient(circle, yellow, orange);
+  }
+}
+
+/* ================================================================================================
+    MEDIA QUERIES
+================================================================================================ */
+
+@media only screen and (max-width : 1050px) {
+  h2 {
+    padding-top: 15px;
+    font-size: 30px;
+  }
+
+  #table {
+    top: 15px;
+  }
+
+  #board {
+    width: 480px;
+  }
+  
+  .square {
+    height: 60px;
+    width: 60px;
+    margin-top: -4px;
+  }
+
+  .piece {
+    height: 52.5px;
+    width: 52.5px;
+    margin: 3.75px;
+  }
+
+  .p-red {
+    border: solid 6px red;
+  }
+  
+  .p-black {
+    border: solid 6px #555;
+  }
+
+  .pen{
+    width: 122.5px;	
+    height: 480px;
+    margin: 0 11.25px;
+	}
+}
+
+@media only screen and (max-width : 800px) {
+  h2 {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
+  #table {
+    top: 10px;
+  }
+
+  #board {
+    width: 320px;
+  }
+  
+  .square {
+    height: 40px;
+    width: 40px;
+    margin-top: -4px;
+  }
+
+  .piece {
+    height: 35px;
+    width: 35px;
+    margin: 2.5px;
+  }
+
+  .p-red {
+    border: solid 4px red;
+  }
+  
+  .p-black {
+    border: solid 4px #555;
+  }
+
+  .pen{
+    width: 82px;	
+    height: 320px;
+    margin: 0 7.5px;
+	}
+}
+
+@media only screen and (max-width : 560px) {
+  h2 {
+    padding-top: 7.5px;
+    font-size: 15px;
+  }
+
+  #table {
+    top: 7.5px;
+  }
+
+  #board {
+    width: 240px;
+  }
+  
+  .square {
+    height: 30px;
+    width: 30px;
+    margin-top: -4px;
+  }
+
+  .piece {
+    height: 26.25px;
+    width: 26.25px;
+    margin: 1.875px;
+  }
+
+  .p-red {
+    border: solid 3px red;
+  }
+  
+  .p-black {
+    border: solid 3px #555;
+  }
+
+  .pen{
+    width: 62.5px;	
+    height: 240px;
+    margin: 0 5.625px;
+	}
+}
+
+@media only screen and (max-width : 440px) {
+  h2 {
+    padding-top: 5.625px;
+    font-size: 11.25px;
+  }
+
+  #table {
+    top: 5.625px;
+  }
+
+  #board {
+    width: 180px;
+  }
+  
+  .square {
+    height: 22.5px;
+    width: 22.5px;
+    margin-top: -4px;
+  }
+
+  .piece {
+    height: 19.68px;
+    width: 19.68px;
+    margin: 1.406px;
+  }
+
+  .p-red {
+    border: solid 2.25px red;
+  }
+  
+  .p-black {
+    border: solid 2.25px #555;
+  }
+
+  .pen{
+    width: 47.875px;	
+    height: 180px;
+    margin: 0 4.219px;
+	}
+}
+
+@media only screen and (max-width : 305px) {
+  h2 {
+    display: none;
+  }
+
+  #table {
+    display: none;
+  }
+}
