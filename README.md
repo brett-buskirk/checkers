@@ -1,5 +1,6 @@
 # checkers #
-This is a two-player checker game that I created while learning how to code at [The Last Mile](https://thelastmile.org/).
+
+This is a two-player checker game that I created while learning how to code at [The Last Mile](https://thelastmile.org/) in 2019.
   
 To load the game, simply open the `index.html` file in a browser window. This can be done easily by dragging the file to a browser page and letting go.
 
